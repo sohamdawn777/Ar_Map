@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AR Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ar.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
+  
+</head>
+<body>
+<div id="map">
+</div>
+<style>
+    body, html { margin: 0; padding: 0; height: 100%; }
+    #map { height: 100%; }
+  </style>
+
+<div id="ar-container" style="display: none; height: 50%;">
+  <a-scene
+    embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+    vr-mode-ui="enabled: false" 
+  >
+    <a-marker preset="hiro">
+    <a-entity 
+          gltf-model="url('scene.glb')"
+          scale="1 1 1"
+          position="0 0 0">
+</a-entity>"
+       scale="1 1 1"
+       position="0 0 0"
+    >
+    </a-entity>
+  </a-marker>
+       
+    <a-camera></a-camera>
+  </a-scene>
+</div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
