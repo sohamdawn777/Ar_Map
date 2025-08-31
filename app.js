@@ -1,5 +1,7 @@
 function viewAR (event) {
-document.getElementById("ar-container").style.display="block";
+document.getElementById("ar-container").style.visibility="visible";
+document.getElementById("ar-container").style.opacity="1";
+document.getElementById("ar-container").style.pointerEvents="auto";
 document.getElementById("ar-container").scrollIntoView({behavior:"smooth"});
 }
 
