@@ -63,6 +63,15 @@ aScene.appendChild(aCamera);
 
 document.body.appendChild(aScene);
 
+aScene.style.visibility="visible";
+aScene.style.opacity="1";
+aScene.style.pointerEvents="auto";
+aScene.style.position = "absolute";
+aScene.style.top = "0";
+aScene.style.left = "0";
+aScene.style.width = "100%";
+aScene.style.height = "100%";
+aScene.style.zIndex = "9999";
 aScene.scrollIntoView({behavior:"smooth"});
 });
 btn.listenerAdded= true;
