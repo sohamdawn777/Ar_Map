@@ -21,10 +21,29 @@ function log(msg) {
 
 function viewAR (event) {
 log("viewAR called.");
-document.querySelector("a-scene").style.visibility="visible";
-document.querySelector("a-scene").style.opacity="1";
-document.querySelector("a-scene").style.pointerEvents="auto";
-document.querySelector("a-scene").scrollIntoView({behavior:"smooth"});
+
+const aScene= document.createElement("a-scene");
+aScene.setAttribute("embedded","");
+aScene.setAttribute("arjs","trackingMethod: best;sourceType: webcam;debugUIEnabled: false;");
+aScene.setAttribute("vr-mode-ui","enabled:false");
+
+const aMarker=document.createElement("a-marker");
+aMarker.setAttribute("preset","hiro");
+
+const aEntity=document.createElement("a-entity");
+aEntity.setAttribute("gltf-model","url(https://raw.githubusercontent.com/sohamdawn777/Ar_Map/main/scene.glb)");
+aEntity.setAttribute("scale","1 1 1");
+aEntity.setAttribute("position","0 0 0");
+
+const aCamera=document.createElement("a-camera");
+
+aMarker.appendChild(aEntity);
+aScene.appendChild(aMarker);
+aScene.appendChild(aCamera);
+
+document.body.appendChild(aScene);
+
+aScene.scrollIntoView({behavior:"smooth"});
 }
 
 window.addEventListener("DOMContentLoaded", () => {
