@@ -22,11 +22,9 @@ function log(msg) {
 async function viewAR (event) {
 log("viewAR called.");
 
-try {
-const cam=await navigator.mediaDevices.getUserMedia({video: true});
-}
-catch (err) {
-log(err);
+const existing=document.querySelector("a-scene");
+if (existing) {
+document.body.removeChild(existing);
 }
 
 const aScene= document.createElement("a-scene");
