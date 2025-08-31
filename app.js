@@ -1,6 +1,6 @@
 function viewAR (event) {
 document.getElementById("ar-container").style.display="block";
-document.getElementById("ar-container").scrollView({"behaviour":"smooth"});
+document.getElementById("ar-container").scrollView({behavior:"smooth"});
 }
 
 window.onload = () => {
