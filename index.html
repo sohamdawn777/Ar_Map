@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <title>AR Map</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
 </head>
 <body>
-<div id="map"></div>
+<div id="map"></div>
+
 
 <div id="ar-container">
   <a-scene
@@ -24,17 +26,20 @@
        
     <a-camera></a-camera>
   </a-scene>
-</div>
+</div>
+
  <style>
   html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    position: relative;
   }
 
   #map {
     height: 100%;
     width: 100%;
+    position: relative;
   }
 
   #ar-container {
@@ -46,11 +51,13 @@
     z-index: 10; 
   }
 </style> 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ar.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
   <script src="app.js"></script>
 
 </body>
 </html>
+
 
