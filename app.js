@@ -1,6 +1,6 @@
 function viewAR (event) {
 document.getElementById("ar-container").style.display="block";
-document.getElementById("ar-container").scrollView({behavior:"smooth"});
+document.getElementById("ar-container").scrollIntoView({behavior:"smooth"});
 }
 
 window.onload = () => {
@@ -19,11 +19,7 @@ window.onload = () => {
   marker.on("popupopen", function() { this.openPopup();
 document.getElementById("ar-btn").addEventListener("click", viewAR); });
 
-  L.circle([22.526911,88.377648], { radius: 15, color: "blue", fillColor: "blue", fillOpacity: 0.2 }).addTo(map);
-
-  const btn = document.createElement("button");
-  btn.id = "view-ar-btn";
-  btn.innerText = "View in AR";
+  L.circle([22.526911,88.377648], { radius: 15, color: "blue", fillColor: "blue", fillOpacity: 0.2 }).addTo(map);
 
   btn.style.position = "fixed";
   btn.style.bottom = "20px";
@@ -36,14 +32,4 @@ document.getElementById("ar-btn").addEventListener("click", viewAR); });
   btn.style.cursor = "pointer";
   btn.style.zIndex = "1000";
 
-  btn.addEventListener("click", () => {
-    const arContainer = document.getElementById("ar-container");
-    if (arContainer) {
-      arContainer.style.display = "block";
-      arContainer.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-
-  // Append to body
-  document.body.appendChild(btn);
-};
+  
