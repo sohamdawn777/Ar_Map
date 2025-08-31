@@ -15,22 +15,7 @@
 
 </head>
 <body>
-<div id="map" style="height: 100%; width: 100%;"></div>
-  <a-scene
-    embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-    vr-mode-ui="enabled: false" 
-    style="visibility: hidden; opacity: 0; pointer-events: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10;"
-  >
-    <a-marker preset="hiro">
-    <a-entity 
-          gltf-model="url(https://raw.githubusercontent.com/sohamdawn777/Ar_Map/main/scene.glb)"
-          scale="1 1 1"
-          position="0 0 0">
-    </a-entity>
-  </a-marker>
-       
-    <a-camera></a-camera>
-  </a-scene>
+<div id="map" style="height: 100%; width: 100%;"></div>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
