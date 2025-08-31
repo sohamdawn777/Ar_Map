@@ -39,9 +39,12 @@
   }
 
   #ar-container {
-    display: none;  /* hidden initially */
-    height: 50%;    /* height when shown */
+    display: none;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
     width: 100%;
+    z-index: 10; 
   }
 </style> 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
