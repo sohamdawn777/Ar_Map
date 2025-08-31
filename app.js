@@ -22,9 +22,9 @@ function log(msg) {
 function viewAR (event) {
 log("viewAR called.");
 document.querySelector("a-scene").style.visibility="visible";
-document.getElementById("ar-container").style.opacity="1";
-document.getElementById("ar-container").style.pointerEvents="auto";
-document.getElementById("ar-container").scrollIntoView({behavior:"smooth"});
+document.querySelector("a-scene").style.opacity="1";
+document.querySelector("a-scene").style.pointerEvents="auto";
+document.querySelector("a-scene").scrollIntoView({behavior:"smooth"});
 }
 
 window.addEventListener("DOMContentLoaded", () => {
