@@ -16,8 +16,13 @@ window.addEventListener("DOMContentLoaded", () => {
   marker.bindPopup(`
     <p>This is sample text.</p><button type="button" id="ar-btn">View in AR</button>`, { maxWidth: 200, minWidth: 50, autoPan: true, closeButton: true, keepInView: true });
 
-  marker.on("popupopen", function() {
-document.getElementById("ar-btn").addEventListener("click", viewAR); });
+  marker.on("popupopen", function(e) {
+  const btn=e.popup._contentNode.querySelector("button");
+if (btn && !btn.listenerAdded) {
+btn.addEventListener("click", viewAR);
+btn.listenerAdded= true;
+}
+});
 
   L.circle([22.526911,88.377648], { radius: 15, color: "blue", fillColor: "blue", fillOpacity: 0.2 }).addTo(map);
 });
