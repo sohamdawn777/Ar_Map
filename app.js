@@ -5,7 +5,7 @@ window.onload = () => {
 
   const marker = L.marker([22.526911,88.377648], { 
     icon: L.icon({ iconUrl: "graffitiIco.png", iconSize: [32,32], iconAnchor: [16,32], popupAnchor: [0,-32] }),
-    title: "Graffiti Spot", draggable: false, riseOnHover: true 
+    title: "Graffiti Spot", draggable: false, riseOnHover: true, riseOffset: 250
   }).addTo(map);
 
   marker.bindPopup(`
