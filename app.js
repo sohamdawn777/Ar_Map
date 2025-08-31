@@ -21,7 +21,7 @@ function log(msg) {
 
 function viewAR (event) {
 log("viewAR called.");
-document.getElementById("ar-container").style.visibility="visible";
+document.querySelector("a-scene").style.visibility="visible";
 document.getElementById("ar-container").style.opacity="1";
 document.getElementById("ar-container").style.pointerEvents="auto";
 document.getElementById("ar-container").scrollIntoView({behavior:"smooth"});
