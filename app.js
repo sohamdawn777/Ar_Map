@@ -1,3 +1,8 @@
+function viewAR (event) {
+document.getElementById("ar-container").style.display="block";
+document.getElementById("ar-container").scrollView({"behaviour":"smooth"});
+}
+
 window.onload = () => {
   const map = L.map("map", { center:[22.526911,88.377648], zoom: 19, maxZoom: 19, minZoom: 1 });
 
@@ -11,7 +16,7 @@ window.onload = () => {
   marker.bindPopup(`
     <p>This is sample text.</p><button type="button" id="ar-btn">View in AR</button>`, { maxWidth: 200, minWidth: 50, autoPan: true, closeButton: true, keepInView: true });
 
-  marker.on("click", function() { this.openPopup();
+  marker.on("popupopen", function() { this.openPopup();
 document.getElementById("ar-btn").addEventListener("click", viewAR); });
 
   L.circle([22.526911,88.377648], { radius: 15, color: "blue", fillColor: "blue", fillOpacity: 0.2 }).addTo(map);
