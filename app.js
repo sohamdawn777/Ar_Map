@@ -19,17 +19,4 @@ window.onload = () => {
   marker.on("popupopen", function() { this.openPopup();
 document.getElementById("ar-btn").addEventListener("click", viewAR); });
 
-  L.circle([22.526911,88.377648], { radius: 15, color: "blue", fillColor: "blue", fillOpacity: 0.2 }).addTo(map);
-
-  btn.style.position = "fixed";
-  btn.style.bottom = "20px";
-  btn.style.right = "20px";
-  btn.style.padding = "10px 20px";
-  btn.style.backgroundColor = "#007bff";
-  btn.style.color = "#fff";
-  btn.style.border = "none";
-  btn.style.borderRadius = "5px";
-  btn.style.cursor = "pointer";
-  btn.style.zIndex = "1000";
-
-  
+  L.circle([22.526911,88.377648], { radius: 15, color: "blue", fillColor: "blue", fillOpacity: 0.2 }).addTo(map);
