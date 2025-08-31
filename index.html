@@ -26,7 +26,24 @@
     <a-camera></a-camera>
   </a-scene>
 </div>
-  
+ <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+  }
+
+  #ar-container {
+    display: none;  /* hidden initially */
+    height: 50%;    /* height when shown */
+    width: 100%;
+  }
+</style> 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ar.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
