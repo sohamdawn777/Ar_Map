@@ -1,2 +1,3 @@
 body, html { margin: 0; padding: 0; height: 100%; }
 #map { height: 100%; }
+#ar-container { display: none; 
