@@ -19,4 +19,5 @@ window.addEventListener("DOMContentLoaded", () => {
   marker.on("popupopen", function() {
 document.getElementById("ar-btn").addEventListener("click", viewAR); });
 
-  L.circle([22.526911,88.377648], { radius: 15, color: "blue", fillColor: "blue", fillOpacity: 0.2 }).addTo(map);
+  L.circle([22.526911,88.377648], { radius: 15, color: "blue", fillColor: "blue", fillOpacity: 0.2 }).addTo(map);
+});
