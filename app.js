@@ -19,8 +19,15 @@ function log(msg) {
 }
 
 
-function viewAR (event) {
+async function viewAR (event) {
 log("viewAR called.");
+
+try {
+const cam=await navigator.mediaDevices.getUserMedia({video: true});
+}
+catch (err) {
+log(err);
+}
 
 const aScene= document.createElement("a-scene");
 aScene.setAttribute("embedded","");
