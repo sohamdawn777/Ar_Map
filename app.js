@@ -20,6 +20,7 @@ function log(msg) {
 
 
 function viewAR (event) {
+log("viewAR called.");
 document.getElementById("ar-container").style.visibility="visible";
 document.getElementById("ar-container").style.opacity="1";
 document.getElementById("ar-container").style.pointerEvents="auto";
@@ -42,10 +43,7 @@ window.addEventListener("DOMContentLoaded", () => {
   marker.on("popupopen", function(e) {
   const btn=e.popup._contentNode.querySelector("button");
 if (btn && !btn.listenerAdded) {
-btn.addEventListener("click", () => {
-log("viewAR called");
-viewAR();
-});
+btn.addEventListener("click",viewAR);
 btn.listenerAdded= true;
 }
 });
