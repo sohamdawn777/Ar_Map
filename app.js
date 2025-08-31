@@ -1,3 +1,24 @@
+function log(msg) {
+  let el = document.getElementById("log");
+  if (!el) {
+    el = document.createElement("div");
+    el.id = "log";
+    el.style.position = "fixed";
+    el.style.bottom = "0";
+    el.style.left = "0";
+    el.style.width = "100%";
+    el.style.maxHeight = "150px";
+    el.style.overflowY = "auto";
+    el.style.backgroundColor = "rgba(0,0,0,0.7)";
+    el.style.color = "#fff";
+    el.style.fontSize = "12px";
+    el.style.zIndex = "9999";
+    document.body.appendChild(el);
+  }
+  el.innerHTML += msg + "<br>";
+}
+
+
 function viewAR (event) {
 document.getElementById("ar-container").style.visibility="visible";
 document.getElementById("ar-container").style.opacity="1";
@@ -21,7 +42,10 @@ window.addEventListener("DOMContentLoaded", () => {
   marker.on("popupopen", function(e) {
   const btn=e.popup._contentNode.querySelector("button");
 if (btn && !btn.listenerAdded) {
-btn.addEventListener("click",viewAR);
+btn.addEventListener("click", () => {
+log("viewAR called");
+viewAR();
+});
 btn.listenerAdded= true;
 }
 });
